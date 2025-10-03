@@ -2,16 +2,20 @@ package main
 
 import "fmt"
 
-const minAllowedTemp = 15
-const maxAllowedTemp = 30
+const (
+	minAllowedTemp = 15
+	maxAllowedTemp = 30
+)
 
 func processDept(staffCount int) {
 	minTemp := minAllowedTemp
 	maxTemp := maxAllowedTemp
 
 	for range staffCount {
-		var operation string
-		var temp int
+		var (
+			operation string
+			temp      int
+		)
 		_, err := fmt.Scanln(&operation, &temp)
 
 		if err != nil || temp > maxAllowedTemp || temp < minAllowedTemp {
