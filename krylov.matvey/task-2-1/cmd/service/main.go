@@ -16,8 +16,8 @@ func processDept(staffCount int) {
 			operation string
 			temp      int
 		)
-		_, err := fmt.Scanln(&operation, &temp)
 
+		_, err := fmt.Scanln(&operation, &temp)
 		if err != nil || temp > maxAllowedTemp || temp < minAllowedTemp {
 			fmt.Println("Invalid temperature number")
 
