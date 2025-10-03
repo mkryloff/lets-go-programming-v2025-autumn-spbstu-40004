@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-const minAllowedTemp int = 15
-const maxAllowedTemp int = 30
+const minAllowedTemp = 15
+const maxAllowedTemp = 30
 
 func processDept(staffCount int) {
 	minTemp := minAllowedTemp
@@ -45,6 +45,7 @@ func processDept(staffCount int) {
 
 func main() {
 	var deptCount int
+
 	_, err := fmt.Scanln(&deptCount)
 	if err != nil {
 		fmt.Println("Invalid departments number")
@@ -64,5 +65,4 @@ func main() {
 
 		processDept(staffCount)
 	}
-
 }
