@@ -13,8 +13,10 @@ func processDept(staffCount int) {
 		var operation string
 		var temp int
 		_, err := fmt.Scanln(&operation, &temp)
+
 		if err != nil || temp > maxAllowedTemp || temp < minAllowedTemp {
 			fmt.Println("Invalid temperature number")
+
 			continue
 		}
 
@@ -29,6 +31,7 @@ func processDept(staffCount int) {
 			}
 		default:
 			fmt.Println("Invalid operation")
+
 			continue
 		}
 
@@ -45,16 +48,20 @@ func main() {
 	_, err := fmt.Scanln(&deptCount)
 	if err != nil {
 		fmt.Println("Invalid departments number")
+
 		return
 	}
 
 	for range deptCount {
 		var staffCount int
+
 		_, err := fmt.Scanln(&staffCount)
 		if err != nil {
 			fmt.Println("Invalid staff number")
+
 			continue
 		}
+
 		processDept(staffCount)
 	}
 
