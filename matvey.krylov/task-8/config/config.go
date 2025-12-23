@@ -14,6 +14,7 @@ type Config struct {
 	LogLevel    string `yaml:"log_level"`
 }
 
+//go:embed prod.yaml
 var prodConfig []byte
 
 func loadConfig(data []byte) (*Config, error) {
