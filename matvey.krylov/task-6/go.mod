@@ -4,7 +4,10 @@ go 1.24.0
 
 toolchain go1.24.11
 
-require github.com/mdlayher/wifi v0.7.1
+require (
+	github.com/DATA-DOG/go-sqlmock v1.5.2
+	github.com/mdlayher/wifi v0.7.1
+)
 
 require (
 	github.com/google/go-cmp v0.7.0 // indirect
